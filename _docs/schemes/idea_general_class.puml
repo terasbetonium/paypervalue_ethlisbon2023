@@ -1,0 +1,27 @@
+@startuml
+class Publisher {
+    +String name
+    +String walletAddress
+}
+
+class CPA_Network {
+    +String campaignID
+    +calculateProfit()
+    +payoutPublisher()
+}
+
+class Advertiser {
+    +String name
+    +String walletAddress
+}
+
+class Transaction {
+    +String txID
+    +String clientID
+    +double amount
+}
+
+Publisher "1" --> "n" CPA_Network : participates
+Advertiser "1" --> "n" CPA_Network : hosts
+CPA_Network "1" --> "n" Transaction : tracks
+@enduml

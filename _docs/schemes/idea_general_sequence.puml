@@ -1,0 +1,12 @@
+@startuml
+participant Publisher as Coinmarketcap
+participant CPA_Network as "CPA Web3"
+participant Advertiser as Uniswap
+participant Database as "Dune Analytics"
+
+Coinmarketcap -> "CPA Web3" : Send lead
+"CPA Web3" -> Uniswap : Track SWAP
+Uniswap -> Database : Log transaction
+Database -> "CPA Web3" : Confirm transaction
+"CPA Web3" -> Coinmarketcap : Calculate reward
+@enduml

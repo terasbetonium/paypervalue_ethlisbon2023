@@ -1,0 +1,12 @@
+@startuml
+package "CPA Web3 System" {
+    [User Tracking Script] 
+    [Dune Analytics DB] 
+    [CPA Web3 Smart Contract]
+    [Frontend Demo Cabinet]
+
+    [User Tracking Script] --> [Dune Analytics DB] : Sends data
+    [Dune Analytics DB] --> [CPA Web3 Smart Contract] : Provides transaction data
+    [Frontend Demo Cabinet] --> [CPA Web3 Smart Contract] : Triggers calculations
+}
+@enduml
