@@ -4,6 +4,12 @@ PayPerValue is a CPA advertising network for web3. By monitoring blockchain data
 # Monorepo for CPA Web3 Project
 
 This repository contains all the components required for the CPA Web3 project.
+For a detailed explanation of the project, architecture, participants, and technical details, please refer to the documents in the - [Docs](./_docs/) directory.
+## Further Information
+- For high-level architecture, please see `idea_architecture_high_low_levels.md`.
+- For business-related information, please see `idea_business.md`.
+- For participant details, please refer to `idea_general_participants_table.md`.
+- For technical diagrams, visit the `schemes` directory.
 
 ## Components
 
