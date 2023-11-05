@@ -1,0 +1,26 @@
+@startuml
+
+actor Advertiser
+actor Publisher
+database Blockchain
+
+== Campaign Creation ==
+Advertiser -> Blockchain : Deploy contract
+with hardcoded terms
+Blockchain -> Advertiser : Campaign created
+
+== Campaign Operation ==
+Advertiser -> Blockchain : Transfer funds
+to contract address
+note right: Funds are the campaign budget
+
+== Campaign End ==
+note over Publisher: Campaign duration ends
+Publisher -> Blockchain : Call payoutPublisher()
+Blockchain -> Publisher : Transfer publisher's share
+
+== Refunding Remaining Balance ==
+Advertiser -> Blockchain : Call refundAdvertiser()
+Blockchain -> Advertiser : Transfer remaining funds
+
+@enduml
